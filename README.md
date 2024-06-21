@@ -2,7 +2,7 @@
 
 This project explains about collecting the data from the Youtube and storing it in a database for analysing the data.
 
----
+
 
 
 ## Table of Contents
@@ -19,7 +19,7 @@ This project explains about collecting the data from the Youtube and storing it 
 
 6. References
 
----
+
 
 ## Introduction
 
@@ -36,7 +36,8 @@ This application has the following features:
 
 4. It has a set of questions from which user can choose to analyse the retreived data from multiple channels.
 
----
+
+
 
 ## Key Skills
 
@@ -50,9 +51,10 @@ This application has the following features:
 
 5. Data Management using SQL 
 
----
+
 
 ## Installation
+
 
 ### Prerequisites
 
@@ -63,7 +65,7 @@ This application has the following features:
 
 ### Libraries in Python
 
-1. Streamlit
+#### 1. Streamlit
    
 * To build Streamlit web application
 
@@ -73,7 +75,7 @@ pip install streamlit
  ```
 
 
-2. Googleapiclient
+#### 2. Googleapiclient
 
 * To connect with Google Cloud Console
 
@@ -83,7 +85,7 @@ pip install google-api-client
 ```
 
 
-3. MYSQL Connector
+#### 3. MYSQL Connector
 
 * To connect with MYSQL database
 
@@ -94,7 +96,7 @@ pip install mysql-connector-python
 ```
 
 
-4. Pandas
+#### 4. Pandas
 
 * To display the data in the form of Dataframe
 
@@ -105,7 +107,7 @@ pip install pandas
 ```
 
 
-5.Datetime
+#### 5. Datetime
 
 * To convert a value from string to datetime datatype
 
@@ -115,7 +117,7 @@ pip install DateTime
 ```
 
 
-6. Isodate
+#### 6. Isodate
 
 * To convert ISO 8601 duration string into a timedelta object
 
@@ -134,7 +136,7 @@ pip install isodate
 
 
 
----
+
 
 ## Information about Data 
 
@@ -178,7 +180,7 @@ COMMENT_ID(1)   ........   COMMENT_ID(100)      COMMENT_ID(1)   ........   COMME
 * With the list of VIDEO_IDs, video data and comment data is collected.
 
 
----
+
 
 ## Workflow
 
@@ -186,16 +188,19 @@ COMMENT_ID(1)   ........   COMMENT_ID(100)      COMMENT_ID(1)   ........   COMME
 
 * Conneting to the Youtube API with the hekp of API key to retreive the channel details from the Google server.
 
+
 ```
 api_key = '**YOUR API KEY**'
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 ```
 
+
+
 ### 2. Storing  and cleaning data
 
 * We should request the Youtube with some parameters and a response is received from the server which contains the data.
-  
+
 
 ##### Part parameter
 
@@ -222,6 +227,7 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 * This is known as Data Harvesting.
 
 
+
 ### 3. Migrate data to a SQL database
 
 * After you've collected data for multiple channels, you can migrate it to a MYSQL database.
@@ -237,15 +243,16 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 * In this project, we have connected the python and MySQL to do the above operations.
 
 
+
 ### 4. Analysing the data
 
 * Query the data using SQL commands in MySQL database for finding the insights about our multiple channel informations.
 
 
+
 ### 5. Streamlit application
 
 * Use Streamlit to display these analysis of the collected Youtube data for multiple channels.
-
 
 
 * Overall, this approach involves building a simple UI with Streamlit, retrieving data from the YouTube API, storing the data SQL as a warehouse, querying the data warehouse with SQL, and displaying the data in the Streamlit app.
