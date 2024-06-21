@@ -2,8 +2,10 @@
 
 This project explains about collecting the data from the Youtube and storing it in a database for analysing the data.
 
+---
 
-# Table of Contents
+
+## Table of Contents
 
 1. Introduction
 
@@ -17,9 +19,9 @@ This project explains about collecting the data from the Youtube and storing it 
 
 6. References
 
+---
 
-
-# Introduction
+## Introduction
 
 The main aim of the project is to create a streamlit application which allows the user to access and analyse the data from multiple Youtube channels.
 
@@ -27,12 +29,16 @@ The main aim of the project is to create a streamlit application which allows th
 This application has the following features:
 
 1. Takes the input from the user and retrieves all the relavent data of the respective channel.
+
 2. An option is provided to store the data in MYSQL database to use it for further purpose.
+
 3. Ability to store multiple channel data in the database.
+
 4. It has a set of questions from which user can choose to analyse the retreived data from multiple channels.
 
+---
 
-# Key Skills
+## Key Skills
 
 1. Python scripting
    
@@ -44,17 +50,18 @@ This application has the following features:
 
 5. Data Management using SQL 
 
+---
 
-# Installation
+## Installation
 
-## Prerequisites
+### Prerequisites
 
 1. Python
 2. VS Code
 3. Google Cloud Console account
 
 
-## Libraries in Python
+### Libraries in Python
 
 1. Streamlit
    
@@ -119,7 +126,7 @@ pip install isodate
 ```
 
 
-## Google API Key
+### Google API Key
 
 * Create an API key in Google Cloud Console.
   
@@ -127,14 +134,16 @@ pip install isodate
 
 
 
+---
 
+## Information about Data 
 
-# Information about Data 
-
- * In this project we collect three main information from Youtube
+ * In this project we collect three main information from Youtube :S
 
 1. Channel data
+
 2. Video data
+
 3. Comment data
                                     
 
@@ -142,24 +151,25 @@ pip install isodate
 
 
                                           
-                                          CHANNEL_ID 
-                                              |
-                                              |
-      
-                                          PLAYLIST_ID 
-                                              |
-                                              |
-                            --------------------------------------------------------------------------------------------                     .................................................                                                                
-                            |                                          |                                               |                 
-                        VIDEO_ID(1)                               VIDEO_ID(2)                                     VIDEO_ID(3)     
-                            |
-         ------------------------------                  ------------------------------                 ------------------------------                ........................................
-         |                            |                  |                            |                 |                            |                 
-   COMMENT_ID(1)   ........   COMMENT_ID(100)      COMMENT_ID(1)   ........   COMMENT_ID(100)       COMMENT_ID(1)   ........   COMMENT_ID(100)         
+                                       CHANNEL_ID 
+                                           |
+                                           |
+   
+                                       PLAYLIST_ID 
+                                           |
+                                           |
+                         --------------------------------------------------------------------------------------------  
+                         |                                          |                                               |                 
+                     VIDEO_ID(1)                               VIDEO_ID(2)                                     VIDEO_ID(3)     
+                         |                                          |                                               |
+      ------------------------------                  ------------------------------                 ------------------------------ 
+      |                            |                  |                            |                 |                            |                 
+COMMENT_ID(1)   ........   COMMENT_ID(100)      COMMENT_ID(1)   ........   COMMENT_ID(100)       COMMENT_ID(1)   ........   COMMENT_ID(100)      
 
 
 
 ````
+
 
 * The channel data is colleted with the help of CHANNEL_ID  which is retreived from the user Input
 
@@ -168,10 +178,11 @@ pip install isodate
 * With the list of VIDEO_IDs, video data and comment data is collected.
 
 
+---
 
-# Workflow
+## Workflow
 
-1. Connect to the Youtube API
+### 1. Connect to the Youtube API
 
 * Conneting to the Youtube API with the hekp of API key to retreive the channel details from the Google server.
 
@@ -181,17 +192,19 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 
 ```
 
-2. Storing  and cleaning data
+### 2. Storing  and cleaning data
 
 * We should request the Youtube with some parameters and a response is received from the server which contains the data.
+  
 
-* Part parameter
+##### Part parameter
 
-* snippet : includes basic details about the channel, such as its title, description, and thumbnail image.
-* statistics : includes information about the channel's performance and engagement, such as the number of subscribers, views, and comments.
-* contentDetails: includes additional information about the channel's content, such as the uploads playlist and the channel's featured channels.
+1. snippet : includes basic details about the channel, such as its title, description, and thumbnail image.
 
-* channel id should be passed for id parameter
+2. statistics : includes information about the channel's performance and engagement, such as the number of subscribers, views, and comments.
+
+3. contentDetails: includes additional information about the channel's content, such as the uploads playlist and the channel's featured channels.
+
 
 * With the help of these parameters, a response is received which contains the data for channel.
 
@@ -209,9 +222,9 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 * This is known as Data Harvesting.
 
 
-3. Migrate data to a SQL database
+### 3. Migrate data to a SQL database
 
-*  After you've collected data for multiple channels, you can migrate it to a MYSQL database.
+* After you've collected data for multiple channels, you can migrate it to a MYSQL database.
 
 * Create a database and seperate tables for channel, video and comment data.
   
@@ -224,20 +237,26 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 * In this project, we have connected the python and MySQL to do the above operations.
 
 
-4. Analysing the data
+### 4. Analysing the data
 
 * Query the data using SQL commands in MySQL database for finding the insights about our multiple channel informations.
 
 
-5. Streamlit application
+### 5. Streamlit application
 
 * Use Streamlit to display these analysis of the collected Youtube data for multiple channels.
+
 
 
 * Overall, this approach involves building a simple UI with Streamlit, retrieving data from the YouTube API, storing the data SQL as a warehouse, querying the data warehouse with SQL, and displaying the data in the Streamlit app.
 
 
 
+### References
+
+1. Streamlit Documentation    :    https://docs.streamlit.io/develop/api-reference
+
+2. YouTube API Documentation  :    https://developers.google.com/youtube/v3/getting-started
 
 
 
