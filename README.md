@@ -232,7 +232,7 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 * This is known as Data Harvesting.
 
 
-
+!(Analysis.png)
 ### 3. Migrate data to a SQL database
 
 * After you've collected data for multiple channels, you can migrate it to a MYSQL database.
