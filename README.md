@@ -34,7 +34,8 @@ This application has the following features:
 pip install streamlit
  ```
 
-2. googleapiclient
+
+2. Googleapiclient
 
 * To connect with Google Cloud Console
 
@@ -42,7 +43,8 @@ pip install streamlit
 pip install google-api-python-client
 ```
 
-3. mysql connector
+
+3. MYSQL Connector
 
 * To connect with MYSQL database
 
@@ -50,7 +52,9 @@ pip install google-api-python-client
 pip install mysql-connector-python
 
 ```
-4. pandas
+
+
+4. Pandas
 
 * To display the data in the form of Dataframe
 
@@ -59,6 +63,7 @@ pip install pandas
 
 ```
 
+
 5.Datetime
 
 * To convert a value from string to datetime datatype
@@ -66,7 +71,8 @@ pip install pandas
 pip install DateTime
 ```
 
-6. isodate
+
+6. Isodate
 
 * To convert ISO 8601 duration string into a timedelta object
 
@@ -79,6 +85,6 @@ pip install isodate
 
 * Create an API key in Google Cloud Console.
   
-* This API key is an unique key to access the Google API which acts as an intermediate between Google server and client which is python.
+* This API key is an unique key to access the Google API which acts as an intermediate between Google server and client.
 
 
