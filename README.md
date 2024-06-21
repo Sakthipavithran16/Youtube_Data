@@ -1,12 +1,28 @@
 # Youtube Data Harvesting and Data Warehousing
 
-This project explains about collecting the data from the Youtube and store it in a database for analysing the data.
+This project explains about collecting the data from the Youtube and storing it in a database for analysing the data.
+
 
 # Table of Contents
+
+1. Introduction
+
+2. Key Skills
+
+3. Installation
+
+4. Information about data
+
+5. Workflow
+
+6. References
+
+
 
 # Introduction
 
 The main aim of the project is to create a streamlit application which allows the user to access and analyse the data from multiple Youtube channels.
+
 
 This application has the following features:
 
@@ -14,6 +30,19 @@ This application has the following features:
 2. An option is provided to store the data in MYSQL database to use it for further purpose.
 3. Ability to store multiple channel data in the database.
 4. It has a set of questions from which user can choose to analyse the retreived data from multiple channels.
+
+
+# Key Skills
+
+1. Python scripting
+   
+2. Data Collection
+   
+3. Streamlit
+
+4. API integration
+
+5. Data Management using SQL 
 
 
 # Installation
@@ -24,11 +53,13 @@ This application has the following features:
 2. VS Code
 3. Google Cloud Console account
 
+
 ## Libraries in Python
 
 1. Streamlit
    
 * To build Streamlit web application
+
 
  ```
 pip install streamlit
@@ -39,6 +70,7 @@ pip install streamlit
 
 * To connect with Google Cloud Console
 
+
 ```
 pip install google-api-client
 ```
@@ -47,6 +79,7 @@ pip install google-api-client
 3. MYSQL Connector
 
 * To connect with MYSQL database
+
 
 ```
 pip install mysql-connector-python
@@ -58,6 +91,7 @@ pip install mysql-connector-python
 
 * To display the data in the form of Dataframe
 
+
 ```
 pip install pandas
 
@@ -67,6 +101,8 @@ pip install pandas
 5.Datetime
 
 * To convert a value from string to datetime datatype
+
+  
 ```
 pip install DateTime
 ```
@@ -76,16 +112,19 @@ pip install DateTime
 
 * To convert ISO 8601 duration string into a timedelta object
 
+
 ```
 pip install isodate
 
 ```
+
 
 ## Google API Key
 
 * Create an API key in Google Cloud Console.
   
 * This API key is an unique key to access the Google API which acts as an intermediate between Google server and client.
+
 
 
 # Workflow
@@ -151,6 +190,12 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 5. Streamlit application
 
 * Use Streamlit to display these analysis of the collected Youtube data for multiple channels.
+
+
+* Overall, this approach involves building a simple UI with Streamlit, retrieving data from the YouTube API, storing the data SQL as a warehouse, querying the data warehouse with SQL, and displaying the data in the Streamlit app.
+
+
+
 
 
 
