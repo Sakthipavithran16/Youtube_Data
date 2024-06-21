@@ -127,6 +127,48 @@ pip install isodate
 
 
 
+
+
+# Information about Data 
+
+ * In this project we collect three main information from Youtube
+
+1. Channel data
+2. Video data
+3. Comment data
+                                    
+
+```
+
+
+                                          
+                                          CHANNEL_ID 
+                                              |
+                                              |
+      
+                                          PLAYLIST_ID 
+                                              |
+                                              |
+                            --------------------------------------------------------------------------------------------                     .................................................                                                                
+                            |                                          |                                               |                 
+                        VIDEO_ID(1)                               VIDEO_ID(2)                                     VIDEO_ID(3)     
+                            |
+         ------------------------------                  ------------------------------                 ------------------------------                ........................................
+         |                            |                  |                            |                 |                            |                 
+   COMMENT_ID(1)   ........   COMMENT_ID(100)      COMMENT_ID(1)   ........   COMMENT_ID(100)       COMMENT_ID(1)   ........   COMMENT_ID(100)         
+
+
+
+````
+
+* The channel data is colleted with the help of CHANNEL_ID  which is retreived from the user Input
+
+* Then PLAYLIST_ID from channel data is used to get the list of VIDEO_IDs.
+
+* With the list of VIDEO_IDs, video data and comment data is collected.
+
+
+
 # Workflow
 
 1. Connect to the Youtube API
