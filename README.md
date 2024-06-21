@@ -1,6 +1,6 @@
 # Youtube Data Harvesting and Data Warehousing
 
-This project explains about collecting the data from the Youtube and storing it in a database for analysing the data.
+This project explains about collecting the data from the Youtube channels and storing it in a database for analysing the data.
 
 
 
