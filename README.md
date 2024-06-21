@@ -40,7 +40,7 @@ pip install streamlit
 * To connect with Google Cloud Console
 
 ```
-pip install google-api-python-client
+pip install google-api-client
 ```
 
 
@@ -86,5 +86,80 @@ pip install isodate
 * Create an API key in Google Cloud Console.
   
 * This API key is an unique key to access the Google API which acts as an intermediate between Google server and client.
+
+
+# Workflow
+
+1. Connect to the Youtube API
+
+* Conneting to the Youtube API with the hekp of API key to retreive the channel details from the Google server.
+
+```
+api_key = '**YOUR API KEY**'
+youtube = build('youtube', 'v3', developerKey=api_key)
+
+```
+
+2. Storing  and cleaning data
+
+* We should request the Youtube with some parameters and a response is received from the server which contains the data.
+
+* Part parameter
+
+* snippet : includes basic details about the channel, such as its title, description, and thumbnail image.
+* statistics : includes information about the channel's performance and engagement, such as the number of subscribers, views, and comments.
+* contentDetails: includes additional information about the channel's content, such as the uploads playlist and the channel's featured channels.
+
+* channel id should be passed for id parameter
+
+* With the help of these parameters, a response is received which contains the data for channel.
+
+* In the response ITEMS key has the information about the channel.
+
+* Extract the required data from the ITEM keys and store it in a variable.
+
+
+* Repeat these steps to collect the video and comment data respectively.
+
+* Use the neccesary functions to get reponse for channel, video and comment data respectively.
+
+* Once all the data is colleted, it should be cleaned like converting to appropiate datatype to store it in database.
+
+* This is known as Data Harvesting.
+
+
+3. Migrate data to a SQL database
+
+*  After you've collected data for multiple channels, you can migrate it to a MYSQL database.
+
+* Create a database and seperate tables for channel, video and comment data.
+  
+* These tables should be created with appropiate constraints so that exisiting channels should not be inserted.
+
+* Insert the cleaned data of channel, video and comment into respective tables.
+
+* This is known as Data Warehousing.
+
+* In this project, we have connected the python and MySQL to do the above operations.
+
+
+4. Analysing the data
+
+* Query the data using SQL commands in MySQL database for finding the insights about our multiple channel informations.
+
+
+5. Streamlit application
+
+* Use Streamlit to display these analysis of the collected Youtube data for multiple channels.
+
+
+
+
+
+
+
+
+
+
 
 
