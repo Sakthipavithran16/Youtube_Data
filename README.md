@@ -271,13 +271,3 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 2. YouTube API Documentation  :    https://developers.google.com/youtube/v3/getting-started
 
 
-
-
-!("Analysis.png")
-
-
-
-
-
-
-
