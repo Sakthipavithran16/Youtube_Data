@@ -59,7 +59,9 @@ This application has the following features:
 ### Prerequisites
 
 1. Python
+
 2. VS Code
+
 3. Google Cloud Console account
 
 
