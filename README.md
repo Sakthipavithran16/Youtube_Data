@@ -206,12 +206,15 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 
 ##### Part parameter
 
-#### 1. snippet : includes basic details about the channel, such as its title, description, and thumbnail image.
+```
 
-#### 2. statistics : includes information about the channel's performance and engagement, such as the number of subscribers, views, and comments.
+1. snippet : includes basic details about the channel, such as its title, description, and thumbnail image.
 
-#### 3. contentDetails: includes additional information about the channel's content, such as the uploads playlist and the channel's featured channels.
+2. statistics : includes information about the channel's performance and engagement, such as the number of subscribers, views, and comments.
 
+3. contentDetails: includes additional information about the channel's content, such as the uploads playlist and the channel's featured channels.
+
+```
 
 * With the help of these parameters, a response is received which contains the data for channel.
 
