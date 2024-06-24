@@ -175,7 +175,7 @@ COMMENT_ID(1)   ......  COMMENT_ID(100)   COMMENT_ID(1)   ......   COMMENT_ID(10
 ````
 
 
-* The channel data is colleted with the help of CHANNEL_ID  which is retreived from the user Input
+* The channel data is collected with the help of CHANNEL_ID  which is retreived from the user Input
 
 * Then PLAYLIST_ID from channel data is used to get the list of VIDEO_IDs.
 
