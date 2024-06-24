@@ -142,7 +142,7 @@ pip install isodate
 
 ## Information about Data 
 
- * In this project we collect three main information from Youtube :S
+ * In this project we collect three main information from Youtube :
 
 1. Channel data
 
